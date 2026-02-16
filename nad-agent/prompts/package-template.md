@@ -29,6 +29,7 @@
    - English only, bar/noir/late-night focus
    - no thriller / true-crime wording
 5. Chapters
+   - 10–12 template chapter lines for a ~60–75 minute mix
    - bar-moment chapter labels (door chime, glass rinse, empty stool, last call, lights dim)
    - include reminder line:
      - `Replace timestamps after final mix export.`

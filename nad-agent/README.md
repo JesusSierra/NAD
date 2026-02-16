@@ -16,12 +16,12 @@ Each package includes:
 - SEO paragraph with required keywords (`noir jazz`, `late-night bar ambience`, and reading/studying/work context)
 - Short NAD brand block + optional soft late-night line
 - 22–30 English tags focused on bar/noir/late-night ambience
-- Chapters template with bar-moment labels
+- Chapters template with 10–12 bar-moment lines for ~60–75 minutes
 - Pinned comment + engagement comments
 - 3 thumbnail prompt variants in NAD visual style
 
 ## Rotation and determinism
-- Series rotation remains: `After Hours`, `Case Files`, `Blue Alley Sessions`.
+- Series rotation remains: `After Hours`, `Bar Conversations`, `Midnight Service`.
 - Output remains deterministic (seeded by date/series context).
 
 ## Requirements

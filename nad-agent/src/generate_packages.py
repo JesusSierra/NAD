@@ -10,7 +10,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("America/Chihuahua")
-SERIES = ["After Hours", "Case Files", "Blue Alley Sessions"]
+SERIES = ["After Hours", "Bar Conversations", "Midnight Service"]
 PUBLISH_WEEKDAYS = {1: "TUE", 3: "THU", 5: "SAT"}  # Monday=0
 DURATION_TARGETS = ["34:00", "42:00", "58:00", "1:06:00", "1:18:00"]
 TITLE_SUFFIX = "Dark Noir Jazz Mix (Late Night Bar Ambience)"
@@ -116,12 +116,16 @@ TAG_POOL = [
 
 CHAPTERS_TEMPLATE = [
     "00:00 Door Chime In The Rain",
-    "04:40 Glass Rinse And Neon Drip",
-    "09:30 Empty Stool, Quiet Piano",
-    "14:10 Cigarette Glow By The Window",
-    "18:45 Quiet Confession At The Counter",
-    "24:20 Last Call, Slow Footsteps",
-    "29:50 Lights Dim Over Wet Wood",
+    "06:20 Glass Rinse, Neon Drip",
+    "12:40 Empty Stool By The Window",
+    "18:50 Cigarette Glow In The Corner",
+    "25:10 Quiet Confession At The Counter",
+    "31:30 Ice Bucket, Slow Pour",
+    "37:40 Rain On The Back Door",
+    "44:00 Half-Finished Drink, Soft Piano",
+    "50:20 Last Order In A Low Voice",
+    "56:40 Last Call, Slow Footsteps",
+    "63:00 Lights Dim Over Wet Wood",
 ]
 
 THUMBNAIL_VARIANTS = [
@@ -158,9 +162,9 @@ def seed_from(*parts: str) -> int:
     return int(digest[:16], 16)
 
 
-def pick_series_for_date(publish_date: date, slot_index: int) -> str:
-    week_index = publish_date.isocalendar().week % len(SERIES)
-    return SERIES[(week_index + slot_index) % len(SERIES)]
+def pick_series_for_run(first_publish_date: date, slot_index: int) -> str:
+    rotation_index = first_publish_date.isocalendar().week % len(SERIES)
+    return SERIES[(rotation_index + slot_index) % len(SERIES)]
 
 
 def next_publish_dates(now_date: date, count: int = 3) -> list[tuple[date, str]]:
@@ -175,8 +179,11 @@ def next_publish_dates(now_date: date, count: int = 3) -> list[tuple[date, str]]
 
 def build_contexts(base: date) -> list[PackageContext]:
     contexts: list[PackageContext] = []
-    for idx, (publish_date, weekday_label) in enumerate(next_publish_dates(base, 3)):
-        series = pick_series_for_date(publish_date, idx)
+    upcoming = next_publish_dates(base, 3)
+    first_publish_date = upcoming[0][0]
+
+    for idx, (publish_date, weekday_label) in enumerate(upcoming):
+        series = pick_series_for_run(first_publish_date, idx)
         rng = random.Random(seed_from("ctx", str(publish_date), series))
         contexts.append(
             PackageContext(
