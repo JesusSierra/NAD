@@ -17,6 +17,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Clean packages folder
+        run: rm -f nad-agent/packages/*.md
 
       - name: Generar paquetes
         run: python3 nad-agent/src/generate_packages.py
