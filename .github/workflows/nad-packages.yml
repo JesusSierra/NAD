@@ -17,7 +17,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Clean packages folder
+
+      - name: Limpiar paquetes anteriores
         run: rm -f nad-agent/packages/*.md
 
       - name: Generar paquetes
@@ -27,5 +28,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: nad-packages
-          path: nad-agent/packages/
+          path: nad-agent/packages/*.md
           if-no-files-found: error

@@ -11,7 +11,7 @@ from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("America/Chihuahua")
 SERIES = ["After Hours", "Case Files", "Blue Alley Sessions"]
-DAY_SLOTS = [(1, "TUE"), (3, "THU"), (5, "SAT")]  # Monday=0
+PUBLISH_WEEKDAYS = {1: "TUE", 3: "THU", 5: "SAT"}  # Monday=0
 DURATION_TARGETS = ["34:00", "42:00", "58:00", "1:06:00", "1:18:00"]
 
 SERIES_KEYWORDS = {
@@ -136,7 +136,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Genera paquetes semanales para Notes After Dark")
     parser.add_argument(
         "--base-date",
-        help="Fecha base en formato YYYY-MM-DD (zona America/Chihuahua).",
+        help="Fecha base en formato YYYY-MM-DD (simula el 'ahora' en America/Chihuahua).",
     )
     parser.add_argument(
         "--output-dir",
@@ -152,29 +152,36 @@ def get_base_date(raw: str | None) -> date:
     return datetime.now(TZ).date()
 
 
-def monday_anchor(d: date) -> date:
-    return d - timedelta(days=d.weekday())
-
-
 def seed_from(*parts: str) -> int:
     joined = "|".join(parts)
     digest = hashlib.sha256(joined.encode("utf-8")).hexdigest()
     return int(digest[:16], 16)
 
 
-def pick_week_series(week_monday: date) -> list[str]:
-    rotation_index = week_monday.isocalendar().week % len(SERIES)
-    return [SERIES[(rotation_index + i) % len(SERIES)] for i in range(3)]
+def pick_series_for_date(publish_date: date, slot_index: int) -> str:
+    week_index = publish_date.isocalendar().week % len(SERIES)
+    return SERIES[(week_index + slot_index) % len(SERIES)]
+
+
+def next_publish_dates(now_date: date, count: int = 3) -> list[tuple[date, str]]:
+    dates: list[tuple[date, str]] = []
+    cursor = now_date + timedelta(days=1)
+
+    while len(dates) < count:
+        weekday = cursor.weekday()
+        if weekday in PUBLISH_WEEKDAYS:
+            dates.append((cursor, PUBLISH_WEEKDAYS[weekday]))
+        cursor += timedelta(days=1)
+
+    return dates
 
 
 def build_contexts(base: date) -> list[PackageContext]:
-    week_monday = monday_anchor(base)
-    weekly_series = pick_week_series(week_monday)
     contexts: list[PackageContext] = []
+    upcoming = next_publish_dates(base, count=3)
 
-    for idx, (weekday_num, weekday_label) in enumerate(DAY_SLOTS):
-        publish_date = week_monday + timedelta(days=weekday_num)
-        series = weekly_series[idx]
+    for idx, (publish_date, weekday_label) in enumerate(upcoming):
+        series = pick_series_for_date(publish_date, idx)
         rng = random.Random(seed_from(str(publish_date), series))
         keyword = rng.choice(SERIES_KEYWORDS[series])
         duration_target = rng.choice(DURATION_TARGETS)
@@ -187,6 +194,7 @@ def build_contexts(base: date) -> list[PackageContext]:
                 duration_target=duration_target,
             )
         )
+
     return contexts
 
 

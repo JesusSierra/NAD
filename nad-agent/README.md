@@ -3,12 +3,12 @@
 Generador semanal de paquetes de publicación para **Notes After Dark (NAD)**, con enfoque jazz noir y salida en Markdown.
 
 ## Qué genera
-Cada ejecución crea 3 archivos en `nad-agent/packages/` para:
+Cada ejecución crea **exactamente 3 archivos** en `nad-agent/packages/` para los **próximos** días de publicación (solo futuro) en `America/Chihuahua`:
 - Martes
 - Jueves
 - Sábado
 
-En la zona horaria `America/Chihuahua`, con:
+Incluye:
 - Frontmatter YAML (`date`, `weekday`, `series`, `keyword`, `duration_target`)
 - Título final + 2 alternativos
 - Descripción (micro-historia noir + SEO + bloque de marca NAD)
@@ -23,7 +23,7 @@ La rotación semanal evita repetición:
 2. Case Files
 3. Blue Alley Sessions
 
-El orden se calcula con la semana ISO (determinístico).
+La salida es determinística por fecha/serie (seeded randomness).
 
 ## Requisitos
 - Python 3.11+
@@ -35,11 +35,16 @@ Desde la raíz del repo:
 python3 nad-agent/src/generate_packages.py
 ```
 
-Opcionalmente puedes fijar una fecha base para reproducibilidad:
+Opcionalmente puedes fijar una fecha base (simula el “ahora” para pruebas):
 
 ```bash
 python3 nad-agent/src/generate_packages.py --base-date 2026-02-16
 ```
+
+## Nota sobre versionado de paquetes
+- `nad-agent/packages/*.md` está ignorado en git.
+- Se conserva `nad-agent/packages/.gitkeep` para mantener la carpeta.
+- Los `.md` se generan en cada corrida (local o CI) y se consumen como artifact.
 
 ## Publicación sugerida (flujo)
 1. Ejecuta el generador.
@@ -61,7 +66,7 @@ Refuerza identidad de serie y autoría en cada publicación:
 
 ```text
 nad-agent/
-  packages/            # Salida generada
+  packages/            # Salida generada (no versionada, salvo .gitkeep)
   prompts/             # Guías de serie y plantilla
   src/
     generate_packages.py
