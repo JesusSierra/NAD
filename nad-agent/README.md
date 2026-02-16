@@ -17,7 +17,7 @@ Each package includes:
 - Short NAD brand block + optional soft late-night line
 - 22–30 English tags focused on bar/noir/late-night ambience
 - Chapters template with 10–12 bar-moment lines for ~60–75 minutes
-- Suno Tracklist section with Mood Arc + 12–18 song-title lines
+- Suno Tracklist section with Mood Arc + exactly 18 song-title lines
 - Pinned comment + engagement comments
 - 3 thumbnail prompt variants in NAD visual style
 

@@ -16,6 +16,10 @@ PUBLISH_WEEKDAYS = {1: "TUE", 3: "THU", 5: "SAT"}
 DURATION_SECONDS_RANGE = (3900, 5100)  # 1:05:00 to 1:25:00
 TITLE_SUFFIX = "Dark Noir Jazz Mix (Late Night Bar Ambience)"
 
+PRIMARY_OBJECTS = [
+    "ashtray", "door", "seat", "glass", "coat", "jukebox", "neon", "stool", "counter", "window", "bottle", "whiskey",
+]
+
 KEYWORD_POOL = [
     "noir jazz bar ambience",
     "late-night jazz bar",
@@ -53,31 +57,6 @@ MELANCHOLIC_PHRASES = [
     "You Said Dont Turn It Up", "I Left The Door Unlocked", "The Night Leaned On The Bar", "You Breathed In Wood Smoke",
     "I Heard The Chime Twice", "You Stayed Until Lights Dimmed", "The Counter Knew Your Hands", "I Let The Rain Play",
     "You Asked If Anyone Stays", "I Said Some Of Us Do", "The Glass Fogged Then Cleared", "You Looked At Nothing Long",
-    "I Poured The Last Slow One", "You Left Before Sunrise", "The Stools Faced Empty Streets", "I Kept The Bar Quiet",
-    "You Said Keep The Rain Outside", "I Left Your Water Near", "The Bar Clock Felt Heavy Tonight", "You Sat Through Closing Music",
-    "I Heard Your Breath Go Quiet", "You Asked For Window Light", "The Night Stayed At My Shoulder", "I Saved The Last Clean Glass",
-]
-
-SUNO_TRACKLINE_POOL = [
-    "Door Chime Under Soft Rain", "One More Glass For Silence", "Empty Stool By The Window", "Keep The Back Light Low",
-    "Whiskey Rings On Oak", "Last Call In A Whisper", "Your Coat Still Smells Rainy", "I Rinsed The Same Glass",
-    "No Rush We Are Closing", "Neon Reflections On Wet Wood", "A Quiet Pour For Two", "You Stayed Through The Slow Song",
-    "Rain Tapping The Bar Door", "Small Talk Under Dim Lights", "I Heard You Breathe Slowly", "Leave The Door Half Open",
-    "Glasses Drying In Blue Light", "You Asked For Less Noise", "Another Minute At The Counter", "Low Piano Behind The Bottle",
-    "We Let The Ice Melt", "The Mirror Held Your Silence", "Your Seat Stayed Warm Tonight", "I Counted Empty Stools",
-    "A Soft Pour Before Dawn", "You Looked Past The Neon", "Wood Smoke And Quiet Hands", "I Kept The Music Gentle",
-    "Last Orders In Rain", "No Questions Just Music", "The Window Caught Your Sigh", "You Said Keep It Low",
-    "Neon Drip On Glassware", "One Light Left Above", "I Saved The Corner Booth", "Our Voices Fell To Hush",
-    "A Napkin Folded Twice", "You Waited Out The Storm", "Slow Steps After Last Call", "The Bar Clock Felt Heavy",
-    "I Left Water Near", "A Quiet Booth For Two", "The Counter Knew Your Hands", "Rain Over Empty Alleys",
-    "No One Touched The Jukebox", "I Polished The Same Tumbler", "Blue Glow On Bottle Necks", "You Stayed Past Midnight",
-    "Soft Jazz Under Street Rain", "I Heard The Chime Twice", "One Last Song Before Close", "Warm Glass In Cold Hands",
-    "The Ashtray Filled Quietly", "You Watched The Streetlights Fade", "I Nodded And Poured", "The Room Breathed In Hush",
-    "Late Pour Near Closing Time", "A Chair Creak In Silence", "Under Neon We Spoke Less", "The Door Closed Gently",
-    "I Kept The Room Soft", "You Asked For The Usual", "A Gentle Bassline Stayed", "Fogged Glass Then Clear",
-    "Your Change Stayed Behind", "The Alley Stayed Blue", "A Quiet Rain Past Closing", "I Did Not Ask Why",
-    "You Left Before Sunrise", "One Empty Glass Remaining", "I Wiped The Counter Slow", "Low Lights Over Wet Wood",
-    "Behind The Bar I Waited", "You Said Nothing For Hours", "A Slow Pour And Pause", "The Night Leaned Inward",
 ]
 
 NARRATIVE_LINES = [
@@ -93,13 +72,24 @@ NARRATIVE_LINES = [
     "I nod, pour, and let people borrow the dark for a while.",
     "I watch lonely stools hold more stories than crowded tables.",
     "Behind the bar, every pause sounds like a memory coming back.",
+    "I polish the bar rail and leave one lamp burning above the bottles.",
+    "From this side of the counter, old songs feel like unfinished letters.",
+    "I keep the back door cracked so the rain can breathe with us.",
+    "Behind the bar, I hear apologies before they reach the glass.",
+    "I count clean tumblers and try not to count regrets.",
+    "I let the bassline travel slowly through the empty stools.",
+    "Behind the bar, the mirror remembers everyone longer than I do.",
+    "I watch a ring of water widen around a forgotten drink.",
+    "From behind the bar, each quiet nod sounds like a confession.",
+    "I pull another bottle down and keep the pour gentle.",
+    "Behind the bar, rain and neon take turns on the window.",
+    "I leave space between notes so no one has to explain tonight.",
 ]
 
 OVERHEARD_QUOTES = [
-    "You okay?", "I'll stay a minute.", "Don't make it loud.", "Leave the door cracked.",
-    "I just needed somewhere warm.", "Can you keep the lights low?", "Not tonight, just music.",
-    "Pour the same as last time.", "I don't want to talk about it.", "Let the song finish first.",
-    "You can stop asking now.", "I thought I'd feel better by now.", "Can I sit here a little longer?",
+    "You okay?", "I'll stay a minute.", "Don't make it loud.", "Leave the door cracked.", "I just needed somewhere warm.",
+    "Can you keep the lights low?", "Not tonight, just music.", "Pour the same as last time.", "I don't want to talk about it.",
+    "Let the song finish first.", "You can stop asking now.", "I thought I'd feel better by now.", "Can I sit here a little longer?",
     "No rush, I know you're closing.",
 ]
 
@@ -129,7 +119,30 @@ TAG_POOL = [
 CHAPTER_MOMENTS = [
     "Door Chime In The Rain", "Glass Rinse, Neon Drip", "Empty Stool By The Window", "Cigarette Glow In The Corner",
     "Quiet Confession At The Counter", "Ice Bucket, Slow Pour", "Rain On The Back Door", "Half-Finished Drink, Soft Piano",
-    "Last Order In A Low Voice", "Last Call, Slow Footsteps", "Lights Dim Over Wet Wood", "Late Stool, No Questions",
+    "Last Order In A Low Voice", "Last Call, Slow Footsteps", "Lights Dim Over Wet Wood",
+]
+
+SUNO_TRACKLINE_POOL = [
+    "Door Chime Under Soft Rain", "One More Glass For Silence", "Empty Stool By The Window", "Keep The Back Light Low",
+    "Whiskey Rings On Oak", "Last Call In A Whisper", "Your Coat Still Smells Rainy", "I Rinsed The Same Glass",
+    "No Rush We Are Closing", "Neon Reflections On Wet Wood", "A Quiet Pour For Two", "You Stayed Through The Slow Song",
+    "Rain Tapping The Bar Door", "Small Talk Under Dim Lights", "I Heard You Breathe Slowly", "Leave The Door Half Open",
+    "Glasses Drying In Blue Light", "You Asked For Less Noise", "Another Minute At The Counter", "Low Piano Behind The Bottle",
+    "We Let The Ice Melt", "The Mirror Held Your Silence", "Your Seat Stayed Warm Tonight", "I Counted Empty Stools",
+    "A Soft Pour Before Dawn", "You Looked Past The Neon", "Wood Smoke And Quiet Hands", "I Kept The Music Gentle",
+    "Last Orders In Rain", "No Questions Just Music", "The Window Caught Your Sigh", "You Said Keep It Low",
+    "Neon Drip On Glassware", "One Light Left Above", "I Saved The Corner Booth", "Our Voices Fell To Hush",
+    "A Napkin Folded Twice", "You Waited Out The Storm", "Slow Steps After Last Call", "The Bar Clock Felt Heavy",
+    "I Left Water Near", "A Quiet Booth For Two", "The Counter Knew Your Hands", "Rain Over Empty Alleys",
+    "No One Touched The Jukebox", "I Polished The Same Tumbler", "Blue Glow On Bottle Necks", "You Stayed Past Midnight",
+    "Soft Jazz Under Street Rain", "I Heard The Chime Twice", "One Last Song Before Close", "Warm Glass In Cold Hands",
+    "The Ashtray Filled Quietly", "You Watched The Streetlights Fade", "I Nodded And Poured", "The Room Breathed In Hush",
+    "Late Pour Near Closing Time", "A Chair Creak In Silence", "Under Neon We Spoke Less", "The Door Closed Gently",
+    "I Kept The Room Soft", "You Asked For The Usual", "A Gentle Bassline Stayed", "Fogged Glass Then Clear",
+    "Your Change Stayed Behind", "The Alley Stayed Blue", "A Quiet Rain Past Closing", "I Did Not Ask Why",
+    "You Left Before Sunrise", "One Empty Glass Remaining", "I Wiped The Counter Slow", "Low Lights Over Wet Wood",
+    "Behind The Bar I Waited", "You Said Nothing For Hours", "A Slow Pour And Pause", "The Night Leaned Inward",
+    "You Leaving Yet Tonight", "You Need The Window Seat", "You Want Another Quiet Pour", "Could We Keep It Soft",
 ]
 
 THUMBNAIL_VARIANTS = [
@@ -148,6 +161,13 @@ class PackageContext:
     duration_target: str
 
 
+@dataclass
+class WeekArtifacts:
+    phrase_map: dict[str, list[str]]
+    tracklist_map: dict[str, list[str]]
+    story_map: dict[str, str]
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate weekly publishing packages for Notes After Dark")
     parser.add_argument("--base-date", help="Base date in YYYY-MM-DD (simulates now in America/Chihuahua).")
@@ -164,6 +184,15 @@ def get_base_date(raw: str | None) -> date:
     return date.fromisoformat(raw) if raw else datetime.now(TZ).date()
 
 
+def normalize(text: str) -> str:
+    return " ".join(re.findall(r"[a-z0-9]+", text.lower()))
+
+
+def phrase_tokens(text: str) -> set[str]:
+    stop = {"the", "a", "and", "for", "in", "on", "of", "to", "we", "you", "i", "it", "at", "by", "our", "is"}
+    return {w for w in re.findall(r"[a-z]+", text.lower()) if len(w) > 2 and w not in stop}
+
+
 def format_hms(seconds: int) -> str:
     h = seconds // 3600
     m = (seconds % 3600) // 60
@@ -171,9 +200,9 @@ def format_hms(seconds: int) -> str:
     return f"{h}:{m:02d}:{s:02d}"
 
 
-def generate_duration_target(rng: random.Random) -> tuple[str, int]:
-    sec = rng.randint(DURATION_SECONDS_RANGE[0], DURATION_SECONDS_RANGE[1])
-    return format_hms(sec), sec
+def generate_duration_target(rng: random.Random) -> str:
+    sec = rng.randint(*DURATION_SECONDS_RANGE)
+    return format_hms(sec)
 
 
 def pick_series_for_run(first_publish_date: date, slot_index: int) -> str:
@@ -198,22 +227,20 @@ def build_contexts(base: date) -> list[PackageContext]:
     for idx, (publish_date, weekday_label) in enumerate(upcoming):
         series = pick_series_for_run(first_publish_date, idx)
         rng = random.Random(seed_from("ctx", str(publish_date), series))
-        duration_target, _ = generate_duration_target(rng)
         contexts.append(
             PackageContext(
                 publish_date=publish_date,
                 weekday_label=weekday_label,
                 series=series,
                 keyword=rng.choice(KEYWORD_POOL),
-                duration_target=duration_target,
+                duration_target=generate_duration_target(rng),
             )
         )
     return contexts
 
 
 def pick_week_phrases(contexts: list[PackageContext]) -> dict[str, list[str]]:
-    week_key = "|".join(sorted(c.publish_date.isoformat() for c in contexts))
-    rng = random.Random(seed_from("phrases", week_key))
+    rng = random.Random(seed_from("phrases", *sorted(c.publish_date.isoformat() for c in contexts)))
     chosen = rng.sample(MELANCHOLIC_PHRASES, k=9)
     return {ctx.publish_date.isoformat(): chosen[i * 3 : i * 3 + 3] for i, ctx in enumerate(contexts)}
 
@@ -222,31 +249,63 @@ def format_title(phrase: str) -> str:
     return f"{phrase} | {TITLE_SUFFIX}"
 
 
-def build_micro_story(ctx: PackageContext) -> str:
-    rng = random.Random(seed_from("story", str(ctx.publish_date), ctx.series))
-    total_lines = rng.randint(8, 12)
-    quote_count = rng.randint(4, min(6, total_lines - 3))
-    narrative_count = total_lines - quote_count
+def stem(line: str) -> str:
+    words = re.findall(r"[a-z]+", line.lower())
+    return " ".join(words[:6])
 
-    narrative = rng.sample(NARRATIVE_LINES, k=narrative_count)
-    quotes = rng.sample(OVERHEARD_QUOTES, k=quote_count)
-    lines: list[str] = [narrative[0]]
-    ni, qi = 1, 0
-    while ni < len(narrative) or qi < len(quotes):
-        if qi < len(quotes):
-            lines.append(f'"{quotes[qi]}"')
-            qi += 1
-        if ni < len(narrative):
-            lines.append(narrative[ni])
-            ni += 1
-    return "\n".join(lines[:total_lines])
+
+def build_week_microstories(contexts: list[PackageContext], used_concepts: set[str]) -> dict[str, str]:
+    available = NARRATIVE_LINES[:]
+    rng = random.Random(seed_from("stories", *sorted(c.publish_date.isoformat() for c in contexts)))
+    rng.shuffle(available)
+    cursor = 0
+    out: dict[str, str] = {}
+
+    for ctx in contexts:
+        rr = random.Random(seed_from("story", str(ctx.publish_date), ctx.series))
+        total_lines = rr.randint(8, 12)
+        quote_count = rr.randint(4, min(6, total_lines - 3))
+        narrative_count = total_lines - quote_count
+
+        narrative: list[str] = []
+        while len(narrative) < narrative_count and cursor < len(available):
+            cand = available[cursor]
+            cursor += 1
+            s = stem(cand)
+            if f"stem:{s}" in used_concepts:
+                continue
+            used_concepts.add(f"stem:{s}")
+            narrative.append(cand)
+
+        if len(narrative) < narrative_count:
+            fallback = [n for n in NARRATIVE_LINES if f"stem:{stem(n)}" not in used_concepts]
+            for cand in fallback:
+                if len(narrative) >= narrative_count:
+                    break
+                used_concepts.add(f"stem:{stem(cand)}")
+                narrative.append(cand)
+
+        quotes = rr.sample(OVERHEARD_QUOTES, k=quote_count)
+        lines: list[str] = [narrative[0]]
+        ni, qi = 1, 0
+        while ni < len(narrative) or qi < len(quotes):
+            if qi < len(quotes):
+                lines.append(f'"{quotes[qi]}"')
+                qi += 1
+            if ni < len(narrative):
+                lines.append(narrative[ni])
+                ni += 1
+
+        out[ctx.publish_date.isoformat()] = "\n".join(lines[:total_lines])
+
+    return out
 
 
 def build_seo_paragraph(ctx: PackageContext) -> str:
     rng = random.Random(seed_from("seo", str(ctx.publish_date), ctx.series))
     return (
-        f"A mellow {ctx.keyword} set with noir jazz textures and late-night bar ambience, "
-        f"ideal for {rng.choice(SEO_CONTEXT)} when the city goes quiet."
+        f"A mellow {ctx.keyword} set with noir jazz textures and late-night bar ambience, ideal for "
+        f"{rng.choice(SEO_CONTEXT)} when the city goes quiet."
     )
 
 
@@ -268,74 +327,170 @@ def pick_tags(ctx: PackageContext) -> str:
 def build_chapters(duration_target: str) -> str:
     h, m, s = [int(x) for x in duration_target.split(":")]
     total_sec = h * 3600 + m * 60 + s
-    count = 11
+    count = len(CHAPTER_MOMENTS)
     step = total_sec // (count - 1)
     lines = []
-    for idx in range(count):
+    for idx, label in enumerate(CHAPTER_MOMENTS):
         ts = idx * step
         mm, ss = divmod(ts, 60)
-        lines.append(f"- {mm:02d}:{ss:02d} {CHAPTER_MOMENTS[idx]}")
+        lines.append(f"- {mm:02d}:{ss:02d} {label}")
     return "\n".join(lines)
 
 
-def significant_words(line: str) -> list[str]:
-    stop = {"the", "a", "and", "for", "in", "on", "of", "to", "we", "you", "i", "it", "at", "by", "our"}
-    return [w for w in re.findall(r"[A-Za-z]+", line.lower()) if w not in stop and len(w) > 2]
+def get_main_object(line: str) -> str | None:
+    words = re.findall(r"[a-z]+", line.lower())
+    for w in words:
+        if w in PRIMARY_OBJECTS:
+            return w
+    return None
 
 
-def build_tracklist_for_package(ctx: PackageContext, blocked_titles: set[str], used_global: set[str]) -> list[str]:
-    rng = random.Random(seed_from("tracklist", str(ctx.publish_date), ctx.series))
-    count = rng.randint(12, 18)
-
-    pool = SUNO_TRACKLINE_POOL[:]
-    rng.shuffle(pool)
-    word_use: dict[str, int] = {}
-    selected: list[str] = []
-
-    for cand in pool:
-        if cand in blocked_titles or cand in used_global or cand in selected:
-            continue
-        words = cand.split()
-        if not (3 <= len(words) <= 9):
-            continue
-        sig = significant_words(cand)
-        if any(word_use.get(w, 0) >= 3 for w in sig):
-            continue
-        selected.append(cand)
-        for w in sig:
-            word_use[w] = word_use.get(w, 0) + 1
-        if len(selected) == count:
-            break
-
-    if len(selected) < 12:
-        for cand in pool:
-            if cand in blocked_titles or cand in used_global or cand in selected:
-                continue
-            if 3 <= len(cand.split()) <= 9:
-                selected.append(cand)
-            if len(selected) >= 12:
-                break
-
-    used_global.update(selected)
-    return selected[:count]
+def close_variant(line: str, title_phrase: str) -> bool:
+    line_tokens = phrase_tokens(line)
+    phrase_toks = phrase_tokens(title_phrase)
+    if not phrase_toks:
+        return False
+    if phrase_toks.issubset(line_tokens):
+        return True
+    overlap = len(line_tokens & phrase_toks) / len(phrase_toks)
+    return overlap >= 0.7
 
 
-def build_week_tracklists(contexts: list[PackageContext], phrase_map: dict[str, list[str]]) -> dict[str, list[str]]:
-    used_global: set[str] = set()
-    out: dict[str, list[str]] = {}
-    for ctx in contexts:
-        phrases = phrase_map[ctx.publish_date.isoformat()]
-        blocked = set(phrases)
-        blocked.update(format_title(p) for p in phrases)
-        out[ctx.publish_date.isoformat()] = build_tracklist_for_package(ctx, blocked, used_global)
+def choose_primary_objects(contexts: list[PackageContext], used_concepts: set[str]) -> dict[str, str]:
+    rng = random.Random(seed_from("objects", *sorted(c.publish_date.isoformat() for c in contexts)))
+    objects = PRIMARY_OBJECTS[:]
+    rng.shuffle(objects)
+    picked = objects[: len(contexts)]
+    out = {}
+    for ctx, obj in zip(contexts, picked):
+        out[ctx.publish_date.isoformat()] = obj
+        used_concepts.add(f"object:{obj}")
     return out
 
 
-def build_markdown(ctx: PackageContext, phrases: list[str], tracklist: list[str]) -> str:
+def build_tracklist_for_package(
+    ctx: PackageContext,
+    primary_object: str,
+    title_phrases: set[str],
+    used_lines_global: set[str],
+    all_primary_objects: set[str],
+) -> list[str]:
+    rng = random.Random(seed_from("tracklist", str(ctx.publish_date), ctx.series))
+    pool = SUNO_TRACKLINE_POOL[:]
+    rng.shuffle(pool)
+
+    candidates: list[str] = []
+    for cand in pool:
+        if cand in used_lines_global:
+            continue
+        if not (3 <= len(cand.split()) <= 9):
+            continue
+        if cand != cand.title():
+            continue
+        if any(close_variant(cand, phrase) for phrase in title_phrases):
+            continue
+
+        main_obj = get_main_object(cand)
+        if main_obj in all_primary_objects and main_obj != primary_object:
+            continue
+        candidates.append(cand)
+
+    selected: list[str] = []
+    i_starts = 0
+    you_or_q = 0
+
+    def add_line(line: str) -> bool:
+        nonlocal i_starts, you_or_q
+        if line in selected:
+            return False
+        starts_i = line.startswith("I ")
+        starts_you_or_q = line.startswith("You ") or line.endswith("?")
+        if starts_i and i_starts >= 3:
+            return False
+        selected.append(line)
+        if starts_i:
+            i_starts += 1
+        if starts_you_or_q:
+            you_or_q += 1
+        return True
+
+    for cand in candidates:
+        if (cand.startswith("You ") or cand.endswith("?")) and you_or_q < 3:
+            add_line(cand)
+        if you_or_q >= 3:
+            break
+
+    for cand in candidates:
+        if len(selected) >= 18:
+            break
+        add_line(cand)
+
+    if len(selected) < 18:
+        for cand in pool:
+            if len(selected) >= 18:
+                break
+            if cand in used_lines_global or cand in selected:
+                continue
+            if not (3 <= len(cand.split()) <= 9):
+                continue
+            if cand.startswith("I ") and i_starts >= 3:
+                continue
+            add_line(cand)
+
+    if you_or_q < 3:
+        for idx, line in enumerate(list(selected)):
+            if you_or_q >= 3:
+                break
+            if line.startswith("You ") or line.endswith("?"):
+                continue
+            for cand in candidates:
+                if cand in selected:
+                    continue
+                if not (cand.startswith("You ") or cand.endswith("?")):
+                    continue
+                selected[idx] = cand
+                you_or_q += 1
+                break
+
+    if len(selected) != 18:
+        raise RuntimeError(f"Could not build 18 track lines for {ctx.publish_date}")
+
+    used_lines_global.update(selected)
+    return selected
+
+
+def build_week_tracklists(
+    contexts: list[PackageContext],
+    phrase_map: dict[str, list[str]],
+    used_concepts: set[str],
+) -> dict[str, list[str]]:
+    primary_obj_map = choose_primary_objects(contexts, used_concepts)
+    all_primary_objects = set(primary_obj_map.values())
+
+    title_phrases: set[str] = set()
+    for ctx in contexts:
+        for phrase in phrase_map[ctx.publish_date.isoformat()]:
+            title_phrases.add(phrase)
+            used_concepts.add(f"title:{normalize(phrase)}")
+
+    used_lines_global: set[str] = set()
+    out: dict[str, list[str]] = {}
+    for ctx in contexts:
+        out[ctx.publish_date.isoformat()] = build_tracklist_for_package(
+            ctx,
+            primary_object=primary_obj_map[ctx.publish_date.isoformat()],
+            title_phrases=title_phrases,
+            used_lines_global=used_lines_global,
+            all_primary_objects=all_primary_objects,
+        )
+    return out
+
+
+def build_markdown(ctx: PackageContext, phrases: list[str], story: str, tracklist: list[str]) -> str:
     rng = random.Random(seed_from("optional", str(ctx.publish_date), ctx.series))
     titles = [format_title(p) for p in phrases]
-    thumbnail_variants = "\n".join(f"- Variant {i + 1}: {v}" for i, v in enumerate(THUMBNAIL_VARIANTS))
     numbered_tracks = "\n".join(f"{i + 1}. {line}" for i, line in enumerate(tracklist))
+    thumbnail_variants = "\n".join(f"- Variant {i + 1}: {v}" for i, v in enumerate(THUMBNAIL_VARIANTS))
 
     return f"""---
 date: {ctx.publish_date.isoformat()}
@@ -352,7 +507,7 @@ duration_target: {ctx.duration_target}
 
 # Description (YouTube)
 ## Noir micro-story
-{build_micro_story(ctx)}
+{story}
 
 ## SEO paragraph
 {build_seo_paragraph(ctx)}
@@ -393,22 +548,34 @@ def slugify_series(series: str) -> str:
     return series.lower().replace(" ", "-")
 
 
+def build_week_artifacts(contexts: list[PackageContext]) -> WeekArtifacts:
+    used_concepts: set[str] = set()
+    phrase_map = pick_week_phrases(contexts)
+    story_map = build_week_microstories(contexts, used_concepts)
+    tracklist_map = build_week_tracklists(contexts, phrase_map, used_concepts)
+    return WeekArtifacts(phrase_map=phrase_map, tracklist_map=tracklist_map, story_map=story_map)
+
+
 def write_packages(contexts: list[PackageContext], output_dir: Path) -> list[Path]:
     output_dir.mkdir(parents=True, exist_ok=True)
     for old in output_dir.glob("*.md"):
         old.unlink(missing_ok=True)
 
-    phrase_map = pick_week_phrases(contexts)
-    tracklist_map = build_week_tracklists(contexts, phrase_map)
+    artifacts = build_week_artifacts(contexts)
     written: list[Path] = []
-
     for ctx in contexts:
-        path = output_dir / f"{ctx.publish_date.isoformat()}_{ctx.weekday_label}_{slugify_series(ctx.series)}.md"
-        path.write_text(
-            build_markdown(ctx, phrase_map[ctx.publish_date.isoformat()], tracklist_map[ctx.publish_date.isoformat()]),
+        date_key = ctx.publish_date.isoformat()
+        target = output_dir / f"{date_key}_{ctx.weekday_label}_{slugify_series(ctx.series)}.md"
+        target.write_text(
+            build_markdown(
+                ctx,
+                artifacts.phrase_map[date_key],
+                artifacts.story_map[date_key],
+                artifacts.tracklist_map[date_key],
+            ),
             encoding="utf-8",
         )
-        written.append(path)
+        written.append(target)
     return written
 
 

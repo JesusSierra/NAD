@@ -36,10 +36,10 @@
 6. Suno Tracklist
    - section header must be: `## Suno Tracklist (Song-Title Lines)`
    - include line: `Mood Arc: Warm Open → Quiet Confession → Last Call`
-   - 12–18 unique numbered title lines (3–9 words, Title Case)
+   - exactly 18 unique numbered title lines (3–9 words, Title Case)
    - melancholic late-night bar tone; no explicit crime/violence; no emojis
    - do not repeat video titles/alternates
-   - avoid heavy word repetition and avoid duplicates across the 3 weekly packages
+   - avoid heavy word repetition and enforce cross-package uniqueness across the 3 weekly packages
 7. Community
    - pinned comment (English)
    - 3 engagement comments (English)
@@ -49,3 +49,18 @@
    - melancholic mood, quiet rain, lonely stools
    - `16:9 YouTube thumbnail composition`
    - `no text, no visible face, no logos`
+
+
+9. Weekly shared concept guards
+   - maintain a shared `used_concepts` set across Tue/Thu/Sat containing:
+     - normalized title key phrases
+     - assigned primary objects (ashtray, door, seat, glass, coat, jukebox, neon, stool, etc.)
+     - recurring micro-story stems
+   - hard checks:
+     - no title phrase/close variant reused in any weekly tracklist
+     - no primary object as main object in more than one package
+     - no repeating micro-story stem across packages
+     - no repeating tracklist line across packages
+   - tracklist start-shape checks:
+     - no more than 3 lines start with `I`
+     - at least 3 lines start with `You` or are phrased as questions
