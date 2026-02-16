@@ -1,0 +1,29 @@
+name: NAD Weekly Packages
+
+on:
+  schedule:
+    - cron: '0 15 * * 1' # 09:00 America/Chihuahua (UTC-6)
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generar paquetes
+        run: python3 nad-agent/src/generate_packages.py
+
+      - name: Subir artifact de paquetes
+        uses: actions/upload-artifact@v4
+        with:
+          name: nad-packages
+          path: nad-agent/packages/
+          if-no-files-found: error
