@@ -1,25 +1,43 @@
-# Package Template (Structure)
+# NAD Package Template (Melancholic Bartender POV)
 
 1. YAML frontmatter
    - date
    - weekday
    - series
-   - keyword
+   - keyword (bar-focused)
    - duration_target
-2. Titles
-   - 1 final title
-   - 2 alternates (English noir/jazz-bar tone)
-3. YouTube description
-   - Noir micro-story (3–6 lines)
-   - SEO paragraph (keywords)
-   - "About NAD" brand paragraph
-   - Optional late-hours line (study/work at night)
+2. Titles (English only)
+   - 1 final + 2 alternates
+   - exact format for every title:
+     - `<Melancholic Phrase> | Dark Noir Jazz Mix (Late Night Bar Ambience)`
+   - phrase rules:
+     - 3–9 words, Title Case
+     - intimate / resigned / overheard mood
+     - avoid detective/dossier framing
+3. Description (English only)
+   - noir micro-story (8–12 lines)
+   - bartender POV (`I`, `behind the bar`)
+   - include 4–6 short overheard quotes in double quotes
+   - SEO paragraph including:
+     - `noir jazz`
+     - `late-night bar ambience`
+     - one of: `jazz for reading`, `jazz for studying`, `jazz for work`
+   - About NAD (2–3 lines)
+   - optional late-night listener line (1 line)
 4. Tags
-   - 20 to 30, comma-separated
+   - 22–30 tags
+   - English only, bar/noir/late-night focus
+   - no thriller / true-crime wording
 5. Chapters
-   - Editable structure + reminder to replace timestamps
+   - bar-moment chapter labels (door chime, glass rinse, empty stool, last call, lights dim)
+   - include reminder line:
+     - `Replace timestamps after final mix export.`
 6. Community
-   - Pinned comment
-   - 3 engagement comments
-7. Thumbnail
-   - NAD variants (faceless bartender / rainy neon street / sax & smoke)
+   - pinned comment (English)
+   - 3 engagement comments (English)
+7. Thumbnail prompts (3 variants)
+   - faceless bartender or bar-counter details
+   - neon reflections, smoke haze, cinematic grain
+   - melancholic mood, quiet rain, lonely stools
+   - `16:9 YouTube thumbnail composition`
+   - `no text, no visible face, no logos`

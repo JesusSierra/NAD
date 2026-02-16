@@ -1,73 +1,52 @@
 # nad-agent
 
-Weekly publishing package generator for **Notes After Dark (NAD)** with a jazz-noir editorial tone and Markdown output.
+Weekly package generator for **Notes After Dark (NAD)** in a melancholic, late-night bar noir style.
 
 ## What it generates
-Each run creates **exactly 3 files** in `nad-agent/packages/` for the **next future** publish dates in `America/Chihuahua`:
+Each run creates **exactly 3 markdown files** for the next **future** publish dates in `America/Chihuahua`:
 - Tuesday
 - Thursday
 - Saturday
 
 Each package includes:
 - YAML frontmatter (`date`, `weekday`, `series`, `keyword`, `duration_target`)
-- Final title + 2 alternates
-- English description (noir micro-story + SEO + NAD brand paragraph + optional late-hours line)
-- 20–30 English tags
-- Chapters template
-- Pinned comment + 3 engagement comments
-- Thumbnail prompt in NAD style
+- English-only titles in this exact format:
+  - `<Melancholic Phrase> | Dark Noir Jazz Mix (Late Night Bar Ambience)`
+- English description with bartender POV micro-story (8–12 lines + 4–6 overheard quotes)
+- SEO paragraph with required keywords (`noir jazz`, `late-night bar ambience`, and reading/studying/work context)
+- Short NAD brand block + optional soft late-night line
+- 22–30 English tags focused on bar/noir/late-night ambience
+- Chapters template with bar-moment labels
+- Pinned comment + engagement comments
+- 3 thumbnail prompt variants in NAD visual style
 
-## Automatic series rotation
-The weekly rotation avoids repetition:
-1. After Hours
-2. Case Files
-3. Blue Alley Sessions
-
-Output is deterministic by date/series (seeded randomness).
+## Rotation and determinism
+- Series rotation remains: `After Hours`, `Case Files`, `Blue Alley Sessions`.
+- Output remains deterministic (seeded by date/series context).
 
 ## Requirements
 - Python 3.11+
 
 ## Local usage
-From repo root:
-
 ```bash
 python3 nad-agent/src/generate_packages.py
 ```
 
-Optional base date (simulate "now" for testing):
-
+Optional base date for reproducible testing:
 ```bash
 python3 nad-agent/src/generate_packages.py --base-date 2026-02-16
 ```
 
-## Package versioning note
+## Package versioning policy
 - `nad-agent/packages/*.md` is git-ignored.
-- `nad-agent/packages/.gitkeep` keeps the folder in the repo.
-- `.md` outputs are generated per run (local/CI) and consumed as workflow artifacts.
-
-## Suggested publishing flow
-1. Run the generator.
-2. Open the package for the next publish day.
-3. Replace chapter timestamps with final render timings.
-4. Copy title, description, tags, and pinned comment into YouTube Studio.
-5. Use the thumbnail prompt to keep NAD visual consistency.
-
-## How to reduce “reused content” risk
-Strengthen series identity and authorship on every release:
-- Keep branded intros/outros with a recognizable NAD sonic signature.
-- Preserve narrative continuity across series (After Hours / Case Files / Blue Alley Sessions).
-- Use original episode descriptions and fresh micro-stories.
-- Maintain a distinct visual language in thumbnails (neon, rain, smoke, noir).
-- Post contextual pinned comments that show active channel curation.
-- Avoid reusing identical text blocks across episodes.
+- `nad-agent/packages/.gitkeep` is tracked to preserve directory structure.
+- CI clears old package markdowns and uploads only newly generated files as an artifact.
 
 ## Structure
-
 ```text
 nad-agent/
   packages/            # Generated output (untracked, except .gitkeep)
-  prompts/             # Series and template guides
+  prompts/             # Editorial template and series guide
   src/
     generate_packages.py
   README.md

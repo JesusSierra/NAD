@@ -1,16 +1,22 @@
-# NAD Series (Automatic Rotation)
+# NAD Series Guide (Noir Bar Continuity)
 
 ## 1) After Hours
-- Focus: urban midnight, rain, neon, elegant melancholy.
-- Key instruments: tenor sax, soft piano, subtle brushes.
-- Visual cue: nearly empty bar and wet city streets.
+- Mood: reflective, rain-soaked, intimate.
+- Anchor details: soft piano, low sax, wet neon windows.
+- Story space: quiet bar after midnight, whispered check-ins.
 
 ## 2) Case Files
-- Focus: night investigation, subtle tension, detective pacing.
-- Key instruments: anchored upright bass, staccato piano, dark brass.
-- Visual cue: an open dossier, smoke, and flickering streetlights.
+- Mood: resigned, personal, memory-heavy (not detective-coded).
+- Anchor details: brushed drums, warm bass, empty stool tension.
+- Story space: overheard fragments and private confessions at the counter.
 
 ## 3) Blue Alley Sessions
-- Focus: intimate club, dense smoke, cinematic groove.
-- Key instruments: alto sax, Rhodes, brushed drums.
-- Visual cue: blue alley behind the club, whiskey, and long silences.
+- Mood: lonely but gentle, slow-burning.
+- Anchor details: smoky room tone, woody bar resonance, muted trumpet/sax color.
+- Story space: late arrivals, long pauses, final drinks before lights dim.
+
+## Style constants across all series
+- Faceless bartender POV.
+- Overheard quotes as short emotional fragments.
+- No dossier / thriller framing.
+- Melancholic late-night bar ambience first.
