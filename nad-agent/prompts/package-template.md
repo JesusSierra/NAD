@@ -33,10 +33,17 @@
    - bar-moment chapter labels (door chime, glass rinse, empty stool, last call, lights dim)
    - include reminder line:
      - `Replace timestamps after final mix export.`
-6. Community
+6. Suno Tracklist
+   - section header must be: `## Suno Tracklist (Song-Title Lines)`
+   - include line: `Mood Arc: Warm Open → Quiet Confession → Last Call`
+   - 12–18 unique numbered title lines (3–9 words, Title Case)
+   - melancholic late-night bar tone; no explicit crime/violence; no emojis
+   - do not repeat video titles/alternates
+   - avoid heavy word repetition and avoid duplicates across the 3 weekly packages
+7. Community
    - pinned comment (English)
    - 3 engagement comments (English)
-7. Thumbnail prompts (3 variants)
+8. Thumbnail prompts (3 variants)
    - faceless bartender or bar-counter details
    - neon reflections, smoke haze, cinematic grain
    - melancholic mood, quiet rain, lonely stools
