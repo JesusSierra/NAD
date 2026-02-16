@@ -1,4 +1,4 @@
-# Plantilla del paquete (estructura)
+# Package Template (Structure)
 
 1. YAML frontmatter
    - date
@@ -6,19 +6,20 @@
    - series
    - keyword
    - duration_target
-2. Títulos
-   - 1 final
-   - 2 alternativos (vibe noir ES/EN)
-3. Descripción YouTube
-   - Micro-historia noir (3–6 líneas)
-   - Párrafo SEO (keywords)
-   - Bloque de marca "Sobre NAD"
+2. Titles
+   - 1 final title
+   - 2 alternates (English noir/jazz-bar tone)
+3. YouTube description
+   - Noir micro-story (3–6 lines)
+   - SEO paragraph (keywords)
+   - "About NAD" brand paragraph
+   - Optional late-hours line (study/work at night)
 4. Tags
-   - 20 a 30, separados por coma
+   - 20 to 30, comma-separated
 5. Chapters
-   - Estructura editable con recordatorio de reemplazar timestamps
-6. Comunidad
-   - Comentario fijado
-   - 3 comentarios de engagement
-7. Miniatura
-   - Prompt con variantes NAD (bartender sin rostro / calle lluviosa neón / sax & smoke)
+   - Editable structure + reminder to replace timestamps
+6. Community
+   - Pinned comment
+   - 3 engagement comments
+7. Thumbnail
+   - NAD variants (faceless bartender / rainy neon street / sax & smoke)

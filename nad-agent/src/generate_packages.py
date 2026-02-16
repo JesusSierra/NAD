@@ -16,94 +16,95 @@ DURATION_TARGETS = ["34:00", "42:00", "58:00", "1:06:00", "1:18:00"]
 
 SERIES_KEYWORDS = {
     "After Hours": [
-        "jazz noir para estudiar",
-        "night jazz ambience",
-        "lluvia y saxofón",
-        "música para escribir de noche",
-        "smooth noir jazz",
-        "late night coffee jazz",
+        "late night jazz ambience",
+        "rainy noir jazz",
+        "night bar sax",
+        "jazz for deep focus",
+        "smoky midnight jazz",
+        "after hours jazz mix",
     ],
     "Case Files": [
         "detective jazz playlist",
-        "misterio urbano con jazz",
+        "film noir jazz soundtrack",
+        "mystery lounge jazz",
         "dark academia jazz",
-        "film noir soundtrack vibes",
-        "jazz cinematográfico",
+        "cinematic night jazz",
         "lofi noir detective",
     ],
     "Blue Alley Sessions": [
-        "smoky bar jazz",
-        "club de jazz nocturno",
+        "smoky jazz bar",
+        "blue alley jazz",
         "sax and smoke ambience",
-        "jazz para leer",
         "vintage noir jazz",
-        "chill jazz de madrugada",
+        "jazz for reading",
+        "midnight club jazz",
     ],
 }
 
 TITLE_PATTERNS = {
     "After Hours": [
-        "After Hours: Lluvia sobre neón y vasos vacíos",
-        "Después de Medianoche | Jazz Noir para Calles Mojadas",
-        "After Hours Noir — Sax, Humo y Ciudad Despierta",
+        "After Hours: Neon Rain and Empty Glasses",
+        "Midnight Drizzle | Noir Jazz for Quiet Streets",
+        "After Hours Noir — Sax, Smoke, and Sleepless Lights",
     ],
     "Case Files": [
-        "Case Files: El expediente de la esquina azul",
-        "Archivo Nocturno | Detective Jazz en la Ciudad",
-        "Case Files Noir — Pistas en humo y contrabajo",
+        "Case Files: The Blue Corner Dossier",
+        "Night Dossier | Detective Jazz in the City",
+        "Case Files Noir — Clues in Smoke and Basslines",
     ],
     "Blue Alley Sessions": [
-        "Blue Alley Sessions: Bajo la luz del callejón",
-        "Sesión en Callejón Azul | Rainy Jazz Noir",
-        "Blue Alley Sessions — Midnight Bar Stories",
+        "Blue Alley Sessions: Beneath the Alley Light",
+        "Blue Alley Sessions | Rainy Neon Jazz Noir",
+        "Blue Alley Sessions — Stories from the Midnight Bar",
     ],
 }
 
 MICRO_STORY_LINES = [
-    "La barra respiraba despacio, como si conociera cada secreto del barrio.",
-    "Una gabardina goteando dejó una moneda sobre el piano y pidió silencio.",
-    "El sax cayó como lluvia tibia sobre las mesas de madera vieja.",
-    "Afuera, el neón rojo titiló tres veces: señal de que alguien mentía.",
-    "Nadie preguntó nombres; aquí solo hablan los vasos y el contrabajo.",
-    "Cuando la batería entró, hasta las sombras parecieron bailar con culpa.",
-    "La noche abrió otro expediente y lo selló con humo azul.",
-    "El último tren pasó de largo, pero la melodía se quedó en la estación.",
+    "The bar breathed slowly, like it knew every secret on the block.",
+    "A dripping trench coat dropped a coin on the piano and asked for silence.",
+    "The sax fell like warm rain across old wooden tables.",
+    "Outside, a red neon sign blinked three times—someone was lying.",
+    "No one traded names here; only glasses and bass notes spoke.",
+    "When the brushes came in, even the shadows started dancing guilty.",
+    "The night opened another file and sealed it with blue smoke.",
+    "The last train passed by, but the melody stayed at the station.",
 ]
 
 SEO_TEMPLATES = [
-    "Disfruta este set de {keyword} ideal para concentrarte, estudiar, escribir o ambientar noches lluviosas con estética film noir.",
-    "Si buscabas {keyword}, jazz nocturno y atmósfera cinematográfica, este mix te acompaña en sesiones de trabajo, lectura y madrugada.",
-    "Este episodio combina {keyword}, ambiente de bar vintage y texturas lo-fi para fans de la estética noir, dark jazz y playlists de enfoque.",
+    "This {keyword} set is made for deep focus, study sessions, writing sprints, and rainy film-noir nights.",
+    "If you were looking for {keyword}, moody night jazz, and cinematic atmosphere, this mix is built for late work and reading hours.",
+    "This episode blends {keyword}, vintage bar ambience, and lo-fi textures for fans of noir aesthetics, dark jazz, and concentration playlists.",
 ]
 
 ABOUT_NAD = (
-    "Notes After Dark (NAD) es un canal de jazz noir: historias nocturnas, lluvia, "
-    "neón y humo convertidos en música para pensar, crear y perderse un rato en la ciudad."
+    "Notes After Dark (NAD) is a jazz-noir channel: rain, neon, smoke, and midnight storytelling turned into music for focus, creation, and long nights."
 )
+
+LATE_HOURS_LINE = "If you're studying or working late, let this set hold the room while you keep going."
 
 TAG_POOL = [
     "jazz noir",
     "noir jazz",
     "dark jazz",
     "night jazz",
-    "jazz para estudiar",
-    "jazz para trabajar",
-    "jazz para leer",
+    "jazz for studying",
+    "jazz for work",
+    "jazz for reading",
     "rainy night ambience",
     "saxophone jazz",
-    "smooth jazz noir",
+    "smooth noir jazz",
     "city night jazz",
-    "música instrumental",
-    "música para concentración",
+    "instrumental jazz",
+    "focus music",
     "film noir music",
     "detective jazz",
     "lofi jazz noir",
     "midnight jazz",
-    "café nocturno",
-    "ambiente lluvioso",
-    "jazz cinematográfico",
+    "late night coffee jazz",
+    "rain ambience jazz",
+    "cinematic jazz",
     "smoky jazz bar",
-    "playlist de madrugada",
+    "late night playlist",
     "relaxing jazz",
     "study music",
     "writing music",
@@ -117,9 +118,9 @@ TAG_POOL = [
 ]
 
 THUMBNAIL_VARIANTS = [
-    "Cantinero sin rostro en primer plano, barra de madera mojada, neón magenta/azul reflejado en cristales, humo suave, grano fílmico, contraste alto, estética jazz noir cinematográfica, sin texto.",
-    "Calle lluviosa con neones desenfocados, silueta con paraguas y saxofón al fondo, charcos con reflejos cian/rojo, atmósfera de misterio, composición vertical para miniatura, sin rostro visible, sin texto.",
-    "Saxofón sobre mesa con vaso de whisky y humo en espiral, luz lateral azul profundo, fondo de club oscuro, partículas en el aire, look analógico 35mm, estilo noir elegante, sin texto.",
+    "Faceless bartender in close-up, wet wooden bar top, magenta/blue neon reflections on glass, soft smoke, cinematic grain, high contrast, jazz-noir mood, no text.",
+    "Rainy neon street with blurred signs, distant silhouette holding a saxophone, cyan/red reflections in puddles, mysterious atmosphere, vertical thumbnail composition, no visible face, no text.",
+    "Saxophone on a table beside a whiskey glass, curling smoke, deep blue side lighting, dark club background, floating particles, 35mm analog look, elegant noir style, no text.",
 ]
 
 
@@ -133,15 +134,15 @@ class PackageContext:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Genera paquetes semanales para Notes After Dark")
+    parser = argparse.ArgumentParser(description="Generate weekly publishing packages for Notes After Dark")
     parser.add_argument(
         "--base-date",
-        help="Fecha base en formato YYYY-MM-DD (simula el 'ahora' en America/Chihuahua).",
+        help="Base date in YYYY-MM-DD (simulates current date in America/Chihuahua).",
     )
     parser.add_argument(
         "--output-dir",
         default="nad-agent/packages",
-        help="Directorio de salida para archivos markdown.",
+        help="Output directory for markdown files.",
     )
     return parser.parse_args()
 
@@ -207,7 +208,8 @@ def pick_titles(ctx: PackageContext) -> tuple[str, list[str]]:
 
 def build_micro_story(ctx: PackageContext) -> str:
     rng = random.Random(seed_from("story", str(ctx.publish_date), ctx.series))
-    lines = rng.sample(MICRO_STORY_LINES, k=4)
+    line_count = rng.randint(3, 6)
+    lines = rng.sample(MICRO_STORY_LINES, k=line_count)
     return "\n".join(lines)
 
 
@@ -216,8 +218,7 @@ def pick_tags(ctx: PackageContext) -> str:
     tags = TAG_POOL[:]
     rng.shuffle(tags)
     count = rng.randint(22, 26)
-    selected = tags[:count]
-    return ", ".join(selected)
+    return ", ".join(tags[:count])
 
 
 def build_markdown(ctx: PackageContext) -> str:
@@ -228,7 +229,7 @@ def build_markdown(ctx: PackageContext) -> str:
     tags_line = pick_tags(ctx)
 
     thumbnail_variants = "\n".join(
-        f"- Variante {i + 1}: {variant}" for i, variant in enumerate(THUMBNAIL_VARIANTS)
+        f"- Variant {i + 1}: {variant}" for i, variant in enumerate(THUMBNAIL_VARIANTS)
     )
 
     return f"""---
@@ -239,44 +240,47 @@ keyword: {ctx.keyword}
 duration_target: {ctx.duration_target}
 ---
 
-# Títulos
-- **Título final:** {title_final}
-- **Alternativa 1:** {alternates[0]}
-- **Alternativa 2:** {alternates[1]}
+# Titles
+- **Final title:** {title_final}
+- **Alternate 1:** {alternates[0]}
+- **Alternate 2:** {alternates[1]}
 
-# Descripción (YouTube)
-## Micro-historia noir
+# Description (YouTube)
+## Noir micro-story
 {story}
 
-## Párrafo SEO
+## SEO paragraph
 {seo}
 
-## Sobre NAD
+## About NAD
 {ABOUT_NAD}
+
+## Optional late-hours line
+{LATE_HOURS_LINE}
 
 # Tags (20–30)
 {tags_line}
 
-# Chapters (plantilla)
-> Reemplaza los timestamps según el corte final del video antes de publicar.
+# Chapters (template)
+> Replace timestamps with final edit timings before publishing.
 
-- 00:00 Apertura — Lluvia y neón
-- 04:40 Primer giro — Sax en el callejón
-- 09:30 Interludio — Conversación en la barra
-- 14:10 Archivo abierto — Contrabajo y sospechas
-- 18:45 Persecución lenta — Batería en escobillas
-- 24:20 Última llamada — Piano de madrugada
-- 29:50 Cierre — Créditos de la noche
+- 00:00 Opening — Rain and neon
+- 04:40 First turn — Sax in the alley
+- 09:30 Interlude — Conversation at the bar
+- 14:10 Open file — Bassline and suspicion
+- 18:45 Slow chase — Brush drums
+- 24:20 Last call — Midnight piano
+- 29:50 Closing — Night credits
 
-# Comentario fijado
-Esta sesión nació para las noches largas. ¿En qué ciudad y a qué hora la estás escuchando? 🌃🎷
+# Pinned comment
+Built for long nights. What city are you listening from, and what time is it there? 🌃🎷
 
-# 3 comentarios de engagement
-1. ¿Prefieres esta vibra para leer, estudiar o conducir de noche?
-2. Si esta sesión fuera una escena de película noir, ¿qué estaría pasando?
-3. ¿Qué elemento quieres para el próximo episodio: más lluvia, más sax o más piano?
+# 3 engagement comments
+1. Do you use this vibe for reading, studying, or driving at night?
+2. If this set were a noir movie scene, what would be happening?
+3. What should lead the next episode: more rain, more sax, or more piano?
 
-# Prompt de miniatura (estilo NAD)
+# Thumbnail prompt (NAD style)
 {thumbnail_variants}
 """
 

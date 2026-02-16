@@ -1,16 +1,16 @@
-# Series NAD (rotación automática)
+# NAD Series (Automatic Rotation)
 
 ## 1) After Hours
-- Enfoque: madrugada urbana, lluvia, neón, melancolía elegante.
-- Instrumentos clave: sax tenor, piano suave, escobillas discretas.
-- Imagen mental: barra casi vacía y calles mojadas.
+- Focus: urban midnight, rain, neon, elegant melancholy.
+- Key instruments: tenor sax, soft piano, subtle brushes.
+- Visual cue: nearly empty bar and wet city streets.
 
 ## 2) Case Files
-- Enfoque: investigación nocturna, tensión sutil, ritmo de detective.
-- Instrumentos clave: contrabajo marcado, piano staccato, metales oscuros.
-- Imagen mental: expediente abierto, humo y farolas intermitentes.
+- Focus: night investigation, subtle tension, detective pacing.
+- Key instruments: anchored upright bass, staccato piano, dark brass.
+- Visual cue: an open dossier, smoke, and flickering streetlights.
 
 ## 3) Blue Alley Sessions
-- Enfoque: club íntimo, humo denso, groove cinematográfico.
-- Instrumentos clave: sax alto, Rhodes, batería escobillada.
-- Imagen mental: callejón azul detrás del club, whisky y silencios largos.
+- Focus: intimate club, dense smoke, cinematic groove.
+- Key instruments: alto sax, Rhodes, brushed drums.
+- Visual cue: blue alley behind the club, whiskey, and long silences.
